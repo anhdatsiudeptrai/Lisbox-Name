@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Lisbox_Name
 {
@@ -16,15 +17,17 @@ namespace Lisbox_Name
         {
             InitializeComponent();
         }
-
+        List<string> ten = new List<string>();
         private void Form1_Load(object sender, EventArgs e)
         {
             lstname.Items.Add(txtname.Text);
         }
 
+        
         private void btnadd_Click(object sender, EventArgs e)
         {
-
+            ten.Add(txtname.Text);
+            
             lstname.Items.Add(txtname.Text);
             txtname.Text = "";
             txtname.Focus();
@@ -60,6 +63,15 @@ namespace Lisbox_Name
         private void btninsert_Click(object sender, EventArgs e)
         {
             lstname.Items.Insert(Convert.ToInt32(txtIndex.Text), txtname.Text);
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            foreach (string t in ten)
+            {
+
+                lstname.Items.Add(t);
+            }
         }
     }
 }

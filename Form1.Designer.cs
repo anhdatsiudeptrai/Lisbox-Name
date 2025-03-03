@@ -35,6 +35,8 @@
             this.btnremove = new System.Windows.Forms.Button();
             this.btninsert = new System.Windows.Forms.Button();
             this.txtIndex = new System.Windows.Forms.TextBox();
+            this.button = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstname
@@ -101,11 +103,32 @@
             this.txtIndex.Size = new System.Drawing.Size(120, 23);
             this.txtIndex.TabIndex = 1;
             // 
+            // button
+            // 
+            this.button.Location = new System.Drawing.Point(396, 190);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(178, 23);
+            this.button.TabIndex = 3;
+            this.button.Text = "thêm vào list";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(396, 239);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "thêm vào listbox";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 554);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.btninsert);
             this.Controls.Add(this.btnremove);
             this.Controls.Add(this.btnedit);
@@ -114,7 +137,7 @@
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.lstname);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -132,6 +155,8 @@
         private System.Windows.Forms.Button btnremove;
         private System.Windows.Forms.Button btninsert;
         private System.Windows.Forms.TextBox txtIndex;
+        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button button2;
     }
 }
 
